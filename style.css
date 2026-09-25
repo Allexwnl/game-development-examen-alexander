@@ -3,5 +3,5 @@ body { margin: 0; background: #111315; color: white; font-family: Arial, sans-se
 main { max-width: 1000px; margin: auto; padding: 20px; }
 #game { width: 100%; aspect-ratio: 960 / 440; background: #08090a; }
 #game canvas { display: block; }
-/* Spelerkleuren sluiten aan op de paddles. */
 header { border-bottom: 2px solid #ff294d; }
+main > p { text-align: center; color: #b8bec6; }
