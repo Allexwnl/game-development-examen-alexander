@@ -10,9 +10,33 @@
 </head>
 <body>
     <main>
-        <header><h1>Best Education / Pong</h1></header>
-        <div id="game" aria-label="Pong playing field"></div>
-        <p>School: W / S. Student: Up / Down. Ball movement demo.</p>
+        <header>
+            <div><p class="eyebrow">SCHOOL VS STUDENT</p><h1>Best Education<span> / PONG</span></h1></div>
+        </header>
+        <div class="scoreboard" aria-live="polite">
+            <div class="school">School <strong id="school-score">0</strong></div>
+            <p>FIRST TO <b>5</b></p>
+            <div class="student"><strong id="student-score">0</strong> Student</div>
+        </div>
+        <div id="game" aria-label="Pong playing field. Keyboard controls are below.">
+            <img class="rocket" src="assets/rocket.svg" alt="" aria-hidden="true">
+            <p class="game-brand">Best Education</p>
+        </div>
+        <div class="toolbar">
+            <p id="message" aria-live="polite">Two players. One keyboard. Ready?</p>
+            <button id="start" type="button">Start game</button>
+        </div>
+        <section class="controls" aria-label="Player controls">
+            <article class="school">
+                <h2><span>01</span> School</h2>
+                <p><kbd>W</kbd> / <kbd>S</kbd> Move up / down</p>
+            </article>
+            <article class="student">
+                <h2><span>02</span> Student</h2>
+                <p><kbd>↑</kbd> / <kbd>↓</kbd> Move up / down</p>
+            </article>
+        </section>
+        <footer><kbd>Space</kbd> start / next round · <kbd>P</kbd> pause</footer>
     </main>
 </body>
 </html>
