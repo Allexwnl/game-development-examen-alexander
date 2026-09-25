@@ -7,6 +7,7 @@ const MAX_BALL_SPEED = 760;
 const WINNING_SCORE = 5;
 const RED = 0xff294d;
 const GREEN = 0x00ca7c;
+const BLUE = 0x36c9f5;
 
 let scene;
 let school;
@@ -49,7 +50,7 @@ function create() {
         backgroundColor: '#08090a', padding: { x: 12, y: 8 }
     }).setOrigin(0.5).setResolution(2);
 
-    keys = scene.input.keyboard.addKeys('W,S,A,UP,DOWN,LEFT,SPACE,P');
+    keys = scene.input.keyboard.addKeys('W,S,A,D,UP,DOWN,LEFT,RIGHT,SPACE,P');
     scene.input.keyboard.on('keydown-SPACE', function (event) {
         if (!event.repeat && document.activeElement.tagName !== 'BUTTON') mainAction();
     });
@@ -92,6 +93,8 @@ function createPlayer(name, x, color, shieldX) {
         shield: scene.add.rectangle(shieldX, HEIGHT / 2, 5, HEIGHT, color).setVisible(false),
         score: 0,
         shieldReady: true,
+        freezeReady: true,
+        frozenFor: 0
     };
 }
 
@@ -132,8 +135,8 @@ function update(time, delta) {
     const seconds = Math.min(delta / 1000, 0.05);
     movePlayer(school, keys.W, keys.S, seconds);
     movePlayer(student, keys.UP, keys.DOWN, seconds);
-    useAbilities(school, keys.A);
-    useAbilities(student, keys.LEFT);
+    useAbilities(school, student, keys.A, keys.D);
+    useAbilities(student, school, keys.LEFT, keys.RIGHT);
 
     // Small movement steps prevent a fast ball from skipping a paddle.
     const steps = Math.ceil(seconds / (1 / 240));
@@ -143,17 +146,26 @@ function update(time, delta) {
 }
 
 function movePlayer(player, up, down, seconds) {
-    const speed = PADDLE_SPEED;
+    player.frozenFor = Math.max(0, player.frozenFor - seconds);
+    const frozen = player.frozenFor > 0;
+    const speed = frozen ? PADDLE_SPEED * 0.35 : PADDLE_SPEED;
+    player.paddle.setFillStyle(frozen ? BLUE : player.color);
     if (up.isDown) player.paddle.y -= speed * seconds;
     if (down.isDown) player.paddle.y += speed * seconds;
     player.paddle.y = Phaser.Math.Clamp(player.paddle.y, 44, HEIGHT - 44);
 }
 
-function useAbilities(player, shieldKey) {
+function useAbilities(player, opponent, shieldKey, freezeKey) {
     if (Phaser.Input.Keyboard.JustDown(shieldKey) && player.shieldReady) {
         player.shieldReady = false;
         player.shield.setVisible(true);
         document.getElementById(player.name + '-shield').textContent = 'Active';
+    }
+    if (Phaser.Input.Keyboard.JustDown(freezeKey) && player.freezeReady) {
+        player.freezeReady = false;
+        opponent.frozenFor = 2;
+        document.getElementById(player.name + '-freeze').textContent = 'Used';
+        beep(220);
     }
 }
 
@@ -233,10 +245,13 @@ function resetRound() {
         player.paddle.setFillStyle(player.color);
         player.shield.setVisible(false);
         player.shieldReady = true;
+        player.freezeReady = true;
+        player.frozenFor = 0;
         document.getElementById(player.name + '-shield').textContent = 'Ready';
+        document.getElementById(player.name + '-freeze').textContent = 'Ready';
     }
     // Do not carry ability presses from a previous round into the next one.
-    for (const key of [keys.A, keys.LEFT]) key.reset();
+    for (const key of [keys.A, keys.D, keys.LEFT, keys.RIGHT]) key.reset();
 }
 
 function updateScores() {
