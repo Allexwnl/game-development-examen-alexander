@@ -17,9 +17,10 @@ const game = new Phaser.Game({
 });
 
 function create() {
-    this.add.text(WIDTH / 2, HEIGHT / 2, 'Phaser is ready', { fontSize: '28px' }).setOrigin(0.5);
+    school = this.add.rectangle(60, HEIGHT / 2, 16, 88, 0xff294d);
+    student = this.add.rectangle(WIDTH - 60, HEIGHT / 2, 16, 88, 0x00ca7c);
 }
 
 function update() {
-    // Nog geen spelbeweging in deze stap.
+    // Besturing volgt in de volgende stap.
 }
