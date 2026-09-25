@@ -4,7 +4,7 @@
 
 Opgesteld op **25 september 2026**, achteraf op basis van de projectbestanden en de chat met de AI-assistent. Dit is geen tijdens de eerste ontwikkeling dagelijks bijgehouden logboek. De student gaf aan tussentijds niet te hebben gecommit. Bij controle had deze repository nog geen commits.
 
-De bestaande bestanden zijn eerst per bestand vastgelegd en daarna op verzoek heringedeeld in functionele stappen; zie HERINDELING.md. De commitdatums worden niet aangepast. De commits tonen de huidige code, niet de oorspronkelijke volgorde of dag waarop iedere regel is geschreven. De nieuwe tussenstappen zijn beperkte technische demonstraties uit de bestaande code. Het zijn geen oorspronkelijke dagversies of door een gebruiker geteste releases.
+De bestaande bestanden zijn eerst per bestand vastgelegd en daarna op verzoek heringedeeld in functionele stappen; zie het onderdeel ?Herindeling van de geschiedenis? hieronder. De commitdatums worden niet aangepast. De commits tonen de huidige code, niet de oorspronkelijke volgorde of dag waarop iedere regel is geschreven. De nieuwe tussenstappen zijn beperkte technische demonstraties uit de bestaande code. Het zijn geen oorspronkelijke dagversies of door een gebruiker geteste releases.
 
 De datums hieronder zijn gekoppeld aan de datumcontext van de chat. Exacte werktijden en een zelfstandige activiteit per dag zijn niet vastgesteld. De student moet de reconstructie controleren en eventuele correcties met hun bron toevoegen.
 
@@ -143,7 +143,7 @@ De gebruiker vond de eerste indeling per compleet bestand niet geschikt om de op
 
 De voorgaande tabel beschrijft de oude indeling en blijft hier staan als procesverantwoording. De oude online main stond bij controle op cfd1e4661f215876909dc6dccfe9bdd48fd47ce7. Voor vervanging is een lokale backupbranch en Git-bundel gemaakt. Publicatie van de herindeling gebeurt met een expliciete force-with-lease op die oude commit, zodat nieuw werk van anderen niet stilzwijgend wordt overschreven. De uitkomst van de push is controleerbaar via Git; beoordelaarstoegang en gebruikerstests zijn hiermee niet aangetoond.
 
-Zie [HERINDELING.md](HERINDELING.md) voor de beperkingen van deze tussenstappen. De eindversie van HTML, CSS, JavaScript en bibliotheek blijft gelijk aan de eerdere versie.
+De tussenstappen zijn achteraf samengestelde demonstraties, geen oorspronkelijke dagversies. De eindversie van HTML, CSS, JavaScript en bibliotheek blijft gelijk aan de eerdere versie.
 
 ## Testwerk — nog zelf uitvoeren
 
