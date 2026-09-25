@@ -33,8 +33,8 @@ const game = new Phaser.Game({
 
 function create() {
     scene = this;
-    school = createPlayer('school', 60, RED);
-    student = createPlayer('student', WIDTH - 60, GREEN);
+    school = createPlayer('school', 60, RED, 16);
+    student = createPlayer('student', WIDTH - 60, GREEN, WIDTH - 16);
     ball = scene.add.circle(WIDTH / 2, HEIGHT / 2, 8, 0xffffff).setVisible(false);
     ball.vx = 0;
     ball.vy = 0;
@@ -49,7 +49,7 @@ function create() {
         backgroundColor: '#08090a', padding: { x: 12, y: 8 }
     }).setOrigin(0.5).setResolution(2);
 
-    keys = scene.input.keyboard.addKeys('W,S,UP,DOWN,SPACE,P');
+    keys = scene.input.keyboard.addKeys('W,S,A,UP,DOWN,LEFT,SPACE,P');
     scene.input.keyboard.on('keydown-SPACE', function (event) {
         if (!event.repeat && document.activeElement.tagName !== 'BUTTON') mainAction();
     });
@@ -74,6 +74,8 @@ function resizeField() {
     scene.scale.setGameSize(WIDTH, HEIGHT);
     for (const player of [school, student]) {
         player.paddle.y = Phaser.Math.Clamp(player.paddle.y / oldHeight * HEIGHT, 44, HEIGHT - 44);
+        player.shield.setPosition(player.shield.x, HEIGHT / 2);
+        player.shield.setSize(5, HEIGHT);
     }
     ball.y = Phaser.Math.Clamp(ball.y / oldHeight * HEIGHT, 8, HEIGHT - 8);
     title.setPosition(WIDTH / 2, HEIGHT * 0.83);
@@ -82,12 +84,14 @@ function resizeField() {
     subtitle.setFontSize(Math.min(16, HEIGHT * 0.04));
 }
 
-function createPlayer(name, x, color) {
+function createPlayer(name, x, color, shieldX) {
     return {
         name: name,
         color: color,
         paddle: scene.add.rectangle(x, HEIGHT / 2, 16, 88, color),
+        shield: scene.add.rectangle(shieldX, HEIGHT / 2, 5, HEIGHT, color).setVisible(false),
         score: 0,
+        shieldReady: true,
     };
 }
 
@@ -128,6 +132,8 @@ function update(time, delta) {
     const seconds = Math.min(delta / 1000, 0.05);
     movePlayer(school, keys.W, keys.S, seconds);
     movePlayer(student, keys.UP, keys.DOWN, seconds);
+    useAbilities(school, keys.A);
+    useAbilities(student, keys.LEFT);
 
     // Small movement steps prevent a fast ball from skipping a paddle.
     const steps = Math.ceil(seconds / (1 / 240));
@@ -143,6 +149,13 @@ function movePlayer(player, up, down, seconds) {
     player.paddle.y = Phaser.Math.Clamp(player.paddle.y, 44, HEIGHT - 44);
 }
 
+function useAbilities(player, shieldKey) {
+    if (Phaser.Input.Keyboard.JustDown(shieldKey) && player.shieldReady) {
+        player.shieldReady = false;
+        player.shield.setVisible(true);
+        document.getElementById(player.name + '-shield').textContent = 'Active';
+    }
+}
 
 function moveBall(seconds) {
     ball.x += ball.vx * seconds;
@@ -155,6 +168,8 @@ function moveBall(seconds) {
     }
     checkPaddle(school, 1);
     checkPaddle(student, -1);
+    checkShield(school, 1);
+    checkShield(student, -1);
 
     if (ball.x < -8) scorePoint(student);
     if (ball.x > WIDTH + 8) scorePoint(school);
@@ -177,6 +192,17 @@ function checkPaddle(player, direction) {
     beep(520);
 }
 
+function checkShield(player, direction) {
+    const shield = player.shield;
+    const reachedShield = direction === 1 ? ball.x <= shield.x + 10 : ball.x >= shield.x - 10;
+    if (!shield.visible || ball.vx * direction >= 0 || !reachedShield) return;
+    ball.vx *= -1;
+    ball.x = shield.x + 11 * direction;
+    shield.setVisible(false);
+    document.getElementById(player.name + '-shield').textContent = 'Used';
+    burst(ball.x, ball.y, player.color);
+    beep(700);
+}
 
 function scorePoint(player) {
     player.score++;
@@ -192,7 +218,7 @@ function scorePoint(player) {
     } else {
         state = 'ready';
         showTitle(name.toUpperCase() + ' SCORES!', 'Press SPACE for the next round');
-        message.textContent = 'Get ready for the next round.';
+        message.textContent = 'Abilities refilled. Get ready for the next round.';
         startButton.textContent = 'Next round';
     }
 }
@@ -205,7 +231,12 @@ function resetRound() {
     for (const player of [school, student]) {
         player.paddle.y = HEIGHT / 2;
         player.paddle.setFillStyle(player.color);
+        player.shield.setVisible(false);
+        player.shieldReady = true;
+        document.getElementById(player.name + '-shield').textContent = 'Ready';
     }
+    // Do not carry ability presses from a previous round into the next one.
+    for (const key of [keys.A, keys.LEFT]) key.reset();
 }
 
 function updateScores() {
