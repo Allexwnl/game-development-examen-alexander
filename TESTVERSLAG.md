@@ -21,18 +21,20 @@
 
 | ID | Opdracht | Verwacht gedrag | Werkelijke uitkomst / feedback | Geslaagd? |
 | --- | --- | --- | --- | --- |
-| T01 | Open het spel en start | Speelveld verschijnt; Start game begint de ronde. | Nog niet getest | — |
-| T02 | Beweeg beide paddles tot aan de randen | W/S en pijlen werken; paddles blijven binnen het veld. | Nog niet getest | — |
-| T03 | Raak bal met midden en rand van paddle | Bal kaatst terug met verschillende hoeken en versnelt tot zijn limiet. | Nog niet getest | — |
-| T04 | Mis links en rechts een bal | De juiste tegenstander krijgt precies één punt; volgende ronde kan starten. | Nog niet getest | — |
-| T05 | Speel tot vijf punten en start opnieuw | Winnaar wordt getoond; nieuwe wedstrijd begint op 0–0. | Nog niet getest | — |
-| T06 | Activeer een schild en mis een bal | Eén redding; daarna verbruikt; volgende ronde weer beschikbaar. | Nog niet getest | — |
-| T07 | Gebruik freeze voor beide spelers | Tegenstander wordt blauw en twee seconden actieve speeltijd trager, daarna herstel. | Nog niet getest | — |
-| T08 | Pauzeer en hervat, ook tijdens freeze | Bal/paddles en freeze-timer stoppen tijdens pauze en gaan daarna verder. | Nog niet getest | — |
-| T09 | Klik op Start en gebruik daarna spatie/P | Noteer of de bediening na muisklikken duidelijk en correct werkt. | Nog niet getest | — |
-| T10 | Wissel van tab en wijzig venstergrootte | Spel pauzeert bij focusverlies en de layout blijft bruikbaar. | Nog niet getest | — |
-| T11 | Luister bij botsingen en scoren | Geluiden spelen na interactie; geen ongewenst hard of aanhoudend geluid. | Nog niet getest | — |
+| T01 | Open het spel en start | Speelveld verschijnt; Start game begint de ronde. | getest en werkt | ✓ |
+| T02 | Beweeg beide paddles tot aan de randen | W/S en pijlen werken; paddles blijven binnen het veld. | getest werkt | ✓ |
+| T03 | Raak bal met midden en rand van paddle | Bal kaatst terug met verschillende hoeken en versnelt tot zijn limiet. | gestest en werkt | ✓ |
+| T04 | Mis links en rechts een bal | De juiste tegenstander krijgt precies één punt; volgende ronde kan starten. | getest en werkt | ✓ |
+| T05 | Speel tot vijf punten en start opnieuw | Winnaar wordt getoond; nieuwe wedstrijd begint op 0–0. | getest en werkt | ✓ |
+| T06 | Activeer een schild en mis een bal | Eén redding; daarna verbruikt; volgende ronde weer beschikbaar. | getest en werkt | ✓ |
+| T07 | Gebruik freeze voor beide spelers | Tegenstander wordt blauw en twee seconden actieve speeltijd trager, daarna herstel. | getest en werkt | ✓ |
+| T08 | Pauzeer en hervat, ook tijdens freeze | Bal/paddles en freeze-timer stoppen tijdens pauze en gaan daarna verder. | getest en werkt | ✓ |
+| T09 | Klik op Start en gebruik daarna spatie/P | Noteer of de bediening na muisklikken duidelijk en correct werkt. | getest en werkt | ✓ |
+| T10 | Wissel van tab en wijzig venstergrootte | Spel pauzeert bij focusverlies en de layout blijft bruikbaar. | getest en werkt | ✓ |
+| T11 | Luister bij botsingen en scoren | Geluiden spelen na interactie; geen ongewenst hard of aanhoudend geluid. | getest en werkt | ✓ |
 | T12 | Bekijk branding en lees de instructies | Logo/naam/slogan volgens afspraken; gebruiker begrijpt bediening. | Nog niet getest | — |
+
+tijd en datum van wanneer deze testen zijn uitgevoerd: 25-9-2026, 15:45 tot 16:01
 
 Vraag daarnaast: wat was onduidelijk, wat was leuk en was het spel te makkelijk of moeilijk? Noteer de echte antwoorden hieronder.
 
@@ -41,26 +43,8 @@ Vraag daarnaast: wat was onduidelijk, wat was leuk en was het spel te makkelijk 
 ## Verwerking van bevindingen
 
 | Bevinding / test-ID | Mijn besluit en reden | Uitgevoerde wijziging | Commitcode |
-| --- | --- | --- | --- |
-| [invullen na test] | [oplossen / geen wijziging, met reden] | [wat is echt veranderd?] | [invullen] |
-
-Als er geen probleem wordt gevonden, noteer dat. Verzin geen bugs om dit onderdeel te vullen.
+| er zijn geen bugs gevonden tijdens het testen | — | — | — |
 
 ## Hertest — met dezelfde gebruiker
 
-- Datum: **[invullen]**
-- Begin- en eindtijd: **[invullen]**
-- Naam tester, dezelfde als test 1: **[invullen]**
-- Tweede speler: **[invullen]**
-- Browser en apparaat: **[invullen]**
-- Nieuwe commitcode: **[invullen]**
-
-| Herhaalde test-ID | Eerdere bevinding | Werkelijke uitkomst na wijziging | Opgelost? / vervolg |
-| --- | --- | --- | --- |
-| [invullen] | [invullen] | [invullen na hertest] | [invullen] |
-
-**Conclusie van de tester:** [invullen]
-
-**Eigen conclusie en nog openstaande punten:** [invullen]
-
-Voeg na iedere uitgevoerde sessie een echte logboeknotitie toe en commit het ingevulde verslag. Dit sjabloon op zichzelf is nog geen examengeldig testresultaat.
+hertest 
