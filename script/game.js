@@ -52,7 +52,7 @@ function create() {
     // Binnen deze functie is 'this' de Phaser-scene. Ik bewaar die voor later.
     scene = this;
     // Dezelfde functie maakt beide spelers; positie, kleur en schildpositie verschillen.
-    school = createPlayer('school', 60, RE D, 16);
+    school = createPlayer('school', 60, RED, 16);
     student = createPlayer('student', WIDTH - 60, GREEN, WIDTH - 16);
     // De bal begint verborgen in het midden en heeft een straal van 8.
     ball = scene.add.circle(WIDTH / 2, HEIGHT / 2, 8, 0xffffff).setVisible(false);

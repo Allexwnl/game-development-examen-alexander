@@ -1,4 +1,4 @@
-# Gebruikerstest en hertest — zelf invullen
+# Gebruikerstest en hertest
 
 **Status: nog niet uitgevoerd.** Onderstaande verwachtingen zijn een testplan, geen behaalde resultaten. Dit document hoort bij [LOGBOEK.md](LOGBOEK.md).
 
@@ -12,12 +12,12 @@
 
 ## Test 1 — echte gegevens na uitvoering
 
-- Datum: **[invullen]**
-- Begin- en eindtijd: **[invullen]**
-- Naam tester: **[invullen]**
-- Tweede speler en rol student: **[invullen]**
-- Browser en apparaat: **[invullen]**
-- Commitcode: **[invullen]**
+- Datum: 25-9-2026
+- Begin- en eindtijd: 15:45 tot 16:01
+- Naam tester: Alexander Zoet
+- Tweede speler en rol student: Mats van Splunter
+- Browser en apparaat: chrome, windows 11, Vivobook_AsusLaptop
+- Commitcode: e8eb6be
 
 | ID | Opdracht | Verwacht gedrag | Werkelijke uitkomst / feedback | Geslaagd? |
 | --- | --- | --- | --- | --- |
