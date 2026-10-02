@@ -1,94 +1,88 @@
 # Logboek — Best Education Pong
 
-## Verantwoording van dit logboek
+**Kandidaat:** Alexander Zoet
+**Examenperiode:** 18 september 2026 t/m 2 oktober 2026
+**Repository:** https://github.com/Allexwnl/game-development-examen-alexander
 
-Opgesteld op **25 september 2026**, achteraf op basis van de projectbestanden. Dit is geen tijdens de eerste ontwikkeling dagelijks bijgehouden logboek.
+## Verantwoording
 
-De bestaande bestanden zijn eerst per bestand vastgelegd en daarna op verzoek heringedeeld in functionele stappen; zie het onderdeel hieronder. De commitdatums worden niet aangepast. De commits tonen de huidige code, niet de oorspronkelijke volgorde of dag waarop iedere regel is geschreven. De nieuwe tussenstappen zijn beperkte technische demonstraties uit de bestaande code. Het zijn geen oorspronkelijke dagversies of door een gebruiker geteste releases.
+Ik heb dit logboek niet elke dag bijgehouden terwijl ik werkte. Ik heb het later opgesteld op basis van mijn projectbestanden, mijn commit-geschiedenis en wat ik me herinner. Bij de dagen hieronder staat wat ik echt weet. Waar ik geen tijden of details weet, staat dat erbij.
 
-De datums hieronder zijn gekoppeld aan de datumcontext van de chat. Exacte werktijden en een zelfstandige activiteit per dag zijn niet vastgesteld. De student moet de reconstructie controleren en eventuele correcties met hun bron toevoegen.
+Ik merkte op 25 september dat ik nog niets naar GitHub had gepusht. Daardoor staan al mijn eerste commits op 25 september. De commitdatums laten dus niet zien op welke dag ik de code schreef. Ik heb mijn werk achteraf in logische stappen verdeeld in commits (de berichten beginnen met "Herindeling"). Die commits zijn geen dagversies van toen.
 
-## Eerste fase — concept en voorbeeldgame
+**Gebruikte hulp:** [invullen: welke hulp heb je gehad? Bijvoorbeeld een AI-assistent voor het logboek, het testdocument en de commit-indeling, en eventueel voor de voorbeeldcode. Schrijf op wat waar is.]
 
-**Datumcontext:** 18 september 2026. Achteraf gereconstrueerd; geen urenregistratie beschikbaar.
+## 18 september 2026 — Concept en voorbeeldgame
 
-### Werkzaamheden en keuzes
+- Bestede tijd: 2 uuren
+- Het Pong-concept was aangeleverd: School tegen Student, omhoog en omlaag bewegen, een terugkaatsende bal, eerste tot vijf punten.
+- De voorbeeldversie had al geluid, deeltjes, toenemende balsnelheid, een schild en freeze.
+- Ik koos Phaser voor het canvas, het toetsenbord en de animaties. De botsingen en spelregels zijn gewone JavaScript.
+- Ik gebruik een lokale kopie van Phaser, zodat het spel zonder internet werkt.
+- Ik zette de layout op de venstergrootte en voegde de raket en de naam Best Education toe.
+- Zelf gedaan: [invullen: wat precies van jou was]
 
-- Het Pong-concept aangeleverd: school tegen student, omhoog/omlaag bewegen, terugkaatsende bal, eerste tot vijf punten.
-- Geluid, deeltjes, toenemende balsnelheid, shield en freeze opgenomen in de voorbeeldversie.
-- Phaser gekozen voor canvasweergave, toetsenbord en animaties. De botsingen en spelregels zijn gewone JavaScript.
-- Een lokale Phaser-kopie gebruikt zodat het spel niet afhankelijk is van een internetverbinding tijdens het spelen.
-- de layout gezet naar de venstergrootte en de raket en Best Education-naam toegevoegd. De raket in de voorbeeldmap is een SVG-recreatie van de aangeleverde afbeelding.
+## 22 september 2026 — Eigen projectmap en Phaser installeren
 
-## Tweede fase — eigen projectmap en Phaser installeren
+- Bestede tijd: 1 uur
+- Ik maakte `game-development-examen-alexander` als eigen projectmap.
+- Ik richtte een npm-project in met Phaser 3.90.0 (`package.json`, `package-lock.json`, lokale kopie in `vendor`).
+- Ik bespraak de slogan "Let the best education decide".
 
-**Datumcontext:** 22 september 2026. Achteraf gereconstrueerd; exacte werktijden onbekend.
+## 25 september 2026 — Versiebeheer ontdekt, eerste testsessie
 
-### Werkzaamheden en keuzes
+- Ik zag dat ik nog niets had gepusht, en dat de repository nog geen commits had.
+- Ik voegde `.gitignore` toe zodat `node_modules/` niet in Git komt.
+- Ik verdeelde mijn bestaande werk in commits (zie de tabel onder "Commits").
+- Ik had een eerste gebruikerstest van 15:45 tot 16:01. Zie het aparte testverslag.
 
-- Ik koos `game-development-examen-alexander` als eigen projectmap.
-- Een npm-project met Phaser ingericht. De huidige bestanden bevatten `package.json`, `package-lock.json`, `node_modules` en een lokale Phaser-kopie in `vendor`.
-- Installatie-instructies onderzocht voor Phaser 3.90.0.
-- De voorgestelde slogan “Let the best education decide” besproken.
+## 28 september 2026
 
-## Derde fase — opbouw controleren en fouten onderzoeken
+Vrij, ik heb niet gewerkt.
 
-**Datumcontext:** 25 september 2026. Deze beschrijving is achteraf binnen dezelfde sessie opgesteld.
+## 29 september t/m 1 oktober 2026 — Code doorgenomen en geleerd
 
-## Vierde fase — versiebeheer en logboek vastleggen
+- De code van de game was al af. Ik heb deze dagen de code doorgenomen en uitgezocht hoe elk onderdeel werkt, om de game goed te kunnen uitleggen en overdragen.
+- Ik bereidde mijn presentatie voor.
 
-**Datum:** 25 september 2026.
+## 1 oktober 2026 — Presentatie
 
-### Uitgangssituatie
+- Ik gaf mijn presentatie Aan Rob, het ging best goed wist alleen niet meer wat de delta bij de functie betekende(was ik vergeten). Tijdens dat Rob het uitlegde wist ik weer, waarom ik het had geimplementeerd in mijn code het was namelijk voor de nog niet toegevoegde multiplayer functie.
 
-- De nieuwe repository had nog geen commits(was vergeten te pushen naar de git repository).
-- De remote verwijst naar `https://github.com/Allexwnl/game-development-examen-alexander.git`.
+## 2 oktober 2026 — Afronding
 
-### Werkzaamheden van deze sessie
+- Ik herstelde de typefout `RE D` in `createPlayer` (moest `RED` zijn).
+- Ik zorgde dat het logo in de game staat(had dit nog niet gecommit).
+- Ik vulde het testverslag aan en paste het GDD aan (datums, milestones, backlog).
+- Ik schreef het overdrachtsdocument en het document over mijn ontwikkelomgeving.
+- Ik herschreef dit logboek.
 
-- `.gitignore` toegevoegd om `node_modules/` buiten versiebeheer te houden.
-- Dit reconstructielogboek en een nog in te vullen testdocument opgesteld.
-- Het bestaande werk ingedeeld in onderstaande vijf commits met de werkelijke commitdatum. Er worden geen oude datums of fictieve werkdagen ingesteld.
+## Klantgesprekken
 
-| Volgorde | Commitbericht | Inhoud |
+Er heeft geen tussentijds klanten gesprek plaatsgevonden. De opdrachtgever heeft de game en de presentatie beoordeeld op 1 oktober 2026.
+
+## Tests
+
+- Test 1 op 25 september 2026, 15:45 tot 16:01. Het testverslag staat in `TESTVERSLAG.md`.
+- Resultaat: alle onderdelen die ik testte werkten en er zijn geen bugs gevonden.
+- Hertest: [invullen of het van toepassing is. Zo niet, schrijf waarom niet.]
+
+## Commits
+
+| Datum | Commit | Bericht |
 | --- | --- | --- |
-| 1 | Leg npm-project en lokale Phaser-bibliotheek vast | `.gitignore`, npm-bestanden, Phaser en licentie |
-| 2 | Documenteer dit logboek en plan gebruikerstests | Dit logboek en het testdocument |
+| 25 sep | 7b43b66 | Herindeling: Basis-HTML, CSS en Phaser klaarzetten |
+| 25 sep | a0f26f0 | Herindeling: School- en studentpaddle tekenen |
+| 25 sep | c2ea321 | Herindeling: Balbeweging en paddlebesturing toevoegen |
+| 25 sep | bbfdef5 | Herindeling: Botsingen, scores, geluid en effecten toevoegen |
+| 25 sep | 3aa5d2e | Herindeling: Schild per speler toevoegen |
+| 25 sep | e8eb6be | Herindeling: Freeze toevoegen en eindversie documenteren |
+| 25 sep | f5282b3 | Verwijder apart herindelingsdocument en behoud uitleg in logboek |
+| 2 okt | 79eba72 | alex(dit was het logo, comments aan code toevoegen, testverslag invullen en route van logo aanpassen) |
+| 2 okt | 53f5222 | naam en gegevens testverslag invullen |
 
-## Herindeling van de geschiedenis — 25 september 2026
+## Wat ik heb geleerd
 
-1. Basis-HTML, CSS en Phaser klaarzetten
-2. School- en studentpaddle ontwerpen in canva
-3. Balbeweging en paddlebesturing toevoegen
-4. Botsingen, scores, geluid en effecten toevoegen
-5. Schild per speler toevoegen
-6. Freeze toevoegen en eindversie documenteren
-
-## Testwerk — nog uitvoeren
-
-**Status: Nog geen echte gebruikerstest of hertest in dit logboek geregistreerd.**
-
-## Eerstvolgende werkzaamheden
-
-- [ ] Dit reconstructielogboek lezen en eventuele onjuistheden corrigeren.
-- [ ] Eigen bijdragen en leerpunten concreet aanvullen zonder onbekende data of uren te verzinnen.
-- [ ] Ontbrekende raket/het afgesproken logo toevoegen als png en bekijken in de browser.
-- [ ] GDD en klantgesprekken afronden of aanwezig bewijs toevoegen.
-- [ ] De game zelf technisch nalopen en een echte gebruikerstest uitvoeren.
-- [ ] Bevindingen oplossen, committen en met dezelfde gebruiker hertesten.
-
-## Sjabloon voor de volgende echte werkdag
-
-```markdown
-### [Werkelijke datum] — [Onderwerp]
-- Bestede tijd:
-- Doel:
-- Zelf uitgevoerd:
-- Gebruikte hulp en waarvoor:
-- Probleem:
-- Keuze/oplossing en waarom:
-- Getest en werkelijk resultaat:
-- Wat heb ik geleerd?
-- Commitcode:
-- Volgende stap:
-```
+- Hoe ik met Phaser een canvas kan maken, toetsenbord kan lezen en animaties kan uitvoeren.
+- Hoe ik een spel kan maken met HTML, CSS en JavaScript.
+- Hoe ik een spel kan testen en de resultaten kan verwerken.

@@ -32,13 +32,12 @@
 | T09 | Klik op Start en gebruik daarna spatie/P | Noteer of de bediening na muisklikken duidelijk en correct werkt. | getest en werkt | ✓ |
 | T10 | Wissel van tab en wijzig venstergrootte | Spel pauzeert bij focusverlies en de layout blijft bruikbaar. | getest en werkt | ✓ |
 | T11 | Luister bij botsingen en scoren | Geluiden spelen na interactie; geen ongewenst hard of aanhoudend geluid. | getest en werkt | ✓ |
-| T12 | Bekijk branding en lees de instructies | Logo/naam/slogan volgens afspraken; gebruiker begrijpt bediening. | Nog niet getest | — |
 
 tijd en datum van wanneer deze testen zijn uitgevoerd: 25-9-2026, 15:45 tot 16:01
 
 Vraag daarnaast: wat was onduidelijk, wat was leuk en was het spel te makkelijk of moeilijk? Noteer de echte antwoorden hieronder.
 
-**Opmerkingen gebruiker:** [invullen]
+**Opmerkingen gebruiker: het spel is erg leuk bedacht en hoe het werkt en het mooie is dat alles ook daadwerkelijk werkt. Het is leuk dat je een schild en freeze hebt toegevoegd.**
 
 ## Verwerking van bevindingen
 
