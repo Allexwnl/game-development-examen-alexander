@@ -1,7 +1,7 @@
 # Logboek — Best Education Pong
 
 **Kandidaat:** Alexander Zoet
-**Examenperiode:** 18 september 2026 t/m 2 oktober 2026
+**Examenperiode:** 17 september 2026 t/m 2 oktober 2026
 **Repository:** https://github.com/Allexwnl/game-development-examen-alexander
 
 ## Verantwoording
@@ -11,6 +11,12 @@ Ik heb dit logboek niet elke dag bijgehouden terwijl ik werkte. Ik heb het later
 Ik merkte op 25 september dat ik nog niets naar GitHub had gepusht. Daardoor staan al mijn eerste commits op 25 september. De commitdatums laten dus niet zien op welke dag ik de code schreef. Ik heb mijn werk achteraf in logische stappen verdeeld in commits (de berichten beginnen met "Herindeling"). Die commits zijn geen dagversies van toen.
 
 **Gebruikte hulp:** [invullen: welke hulp heb je gehad? Bijvoorbeeld een AI-assistent voor het logboek, het testdocument en de commit-indeling, en eventueel voor de voorbeeldcode. Schrijf op wat waar is.]
+
+## 17 september 2026 — Voorbereiding
+
+- Bestede tijd: 1 uur
+- Ik las de gdd en de opdrachtbeschrijving. Ik maakte een plan van aanpak en een backlog met mogelijke extra functies.
+- Ik ben langs mijn klant geweest om de het idee van de game te bespreken en om te vragen of ik het goed begreep. Ik kreeg toestemming, maar ik moest wel wat documentatie van hoe het was geschreven aanpassen. Ik heb de aanpassingen doorgevoerd en de gdd bijgewerkt.
 
 ## 18 september 2026 — Concept en voorbeeldgame
 
@@ -56,10 +62,12 @@ Vrij, ik heb niet gewerkt.
 - Ik vulde het testverslag aan en paste het GDD aan (datums, milestones, backlog).
 - Ik schreef het overdrachtsdocument en het document over mijn ontwikkelomgeving.
 - Ik herschreef dit logboek.
+- Ik heb het slogan toegevoegd.
+- Ik heb alles gepusht naar GitHub en de repository gedeeld met mijn docent.
 
 ## Klantgesprekken
 
-Er heeft geen tussentijds klanten gesprek plaatsgevonden. De opdrachtgever heeft de game en de presentatie beoordeeld op 1 oktober 2026.
+Er heeft geen tussentijds klanten gesprek plaatsgevonden, maar het eerste klantengesprek heeft plaatsgevonden op 18 september 2026 voor goedkeuring van de gdd. De opdrachtgever heeft de game en de presentatie beoordeeld op 1 oktober 2026.
 
 ## Tests
 
@@ -80,6 +88,8 @@ Er heeft geen tussentijds klanten gesprek plaatsgevonden. De opdrachtgever heeft
 | 25 sep | f5282b3 | Verwijder apart herindelingsdocument en behoud uitleg in logboek |
 | 2 okt | 79eba72 | alex(dit was het logo, comments aan code toevoegen, testverslag invullen en route van logo aanpassen) |
 | 2 okt | 53f5222 | naam en gegevens testverslag invullen |
+| 2 okt | 0597e77 | Logboek herinvullen, testverslag beetje aangepast, en route van afbeelding aangepast, overdrachtsdocument en ontwikkelomgeving document toegevoegd |
+| 2 okt |  | documents folder gemaakt en alle documenten erin gezet, slogan toegevoegd, klantengesprek erin gezet en presentatie link erin gezet |
 
 ## Wat ik heb geleerd
 

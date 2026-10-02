@@ -4,8 +4,8 @@
 
 ## Computer
 - Merk: Asus
-- Model: Vivobook **[exact modelnummer invullen, bijv. uit Instellingen > Systeem > Info]**
-- Besturingssysteem: Windows 11 **[versie invullen indien bekend]**
+- Model: Vivobook X515JAB_x515JA
+- Besturingssysteem: Windows 11
 
 ## Software
 | Software | Versie | Waarvoor gebruikt |

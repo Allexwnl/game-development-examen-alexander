@@ -68,7 +68,7 @@ function create() {
         fontFamily: 'Arial', fontSize: '42px', fontStyle: 'bold', color: '#ffffff',
         backgroundColor: '#08090a', padding: { x: 20, y: 10 }
     }).setOrigin(0.5).setResolution(2);
-    subtitle = scene.add.text(WIDTH / 2, 245, 'Let the best education decide', {
+    subtitle = scene.add.text(WIDTH / 2, 245, 'Wij lanceren je de toekomst in!', {
         fontFamily: 'Arial', fontSize: '16px', color: '#a5adb7',
         backgroundColor: '#08090a', padding: { x: 12, y: 8 }
     }).setOrigin(0.5).setResolution(2);

@@ -35,8 +35,6 @@
 
 tijd en datum van wanneer deze testen zijn uitgevoerd: 25-9-2026, 15:45 tot 16:01
 
-Vraag daarnaast: wat was onduidelijk, wat was leuk en was het spel te makkelijk of moeilijk? Noteer de echte antwoorden hieronder.
-
 **Opmerkingen gebruiker: het spel is erg leuk bedacht en hoe het werkt en het mooie is dat alles ook daadwerkelijk werkt. Het is leuk dat je een schild en freeze hebt toegevoegd.**
 
 ## Verwerking van bevindingen
