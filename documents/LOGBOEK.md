@@ -89,7 +89,7 @@ Er heeft geen tussentijds klanten gesprek plaatsgevonden, maar het eerste klante
 | 2 okt | 79eba72 | alex(dit was het logo, comments aan code toevoegen, testverslag invullen en route van logo aanpassen) |
 | 2 okt | 53f5222 | naam en gegevens testverslag invullen |
 | 2 okt | 0597e77 | Logboek herinvullen, testverslag beetje aangepast, en route van afbeelding aangepast, overdrachtsdocument en ontwikkelomgeving document toegevoegd |
-| 2 okt |  | documents folder gemaakt en alle documenten erin gezet, slogan toegevoegd, klantengesprek erin gezet en presentatie link erin gezet |
+| 2 okt | 0a7bd5b | documents folder gemaakt en alle documenten erin gezet, slogan toegevoegd, klantengesprek erin gezet en presentatie link erin gezet |
 
 ## Wat ik heb geleerd
 
