@@ -10,8 +10,6 @@ Ik heb dit logboek niet elke dag bijgehouden terwijl ik werkte. Ik heb het later
 
 Ik merkte op 25 september dat ik nog niets naar GitHub had gepusht. Daardoor staan al mijn eerste commits op 25 september. De commitdatums laten dus niet zien op welke dag ik de code schreef. Ik heb mijn werk achteraf in logische stappen verdeeld in commits (de berichten beginnen met "Herindeling"). Die commits zijn geen dagversies van toen.
 
-**Gebruikte hulp:** [invullen: welke hulp heb je gehad? Bijvoorbeeld een AI-assistent voor het logboek, het testdocument en de commit-indeling, en eventueel voor de voorbeeldcode. Schrijf op wat waar is.]
-
 ## 17 september 2026 — Voorbereiding
 
 - Bestede tijd: 1 uur
